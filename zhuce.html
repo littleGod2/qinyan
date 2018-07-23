@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link href="css/cityLayout.css" type="text/css" rel="stylesheet">
+    <script src="js/index.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/cityselect.js"></script>
+</head>
+<style>
+    .login{
+        background: url("img/zhucebg.png") no-repeat;
+        background-size: 100% 100%;
+        height: 3.3rem;
+        width:2.3rem;
+    }
+    .forget{
+        margin: 0;color: #234cc4;font-weight: 600;font-size: .1rem
+    }
+    .deng_sub{
+        right:.8rem;
+    }
+    @media screen and (max-width: 600px) {
+        .provinceCityAll{
+            left: .45rem!important;
+        }
+    }
+    .provinceCityAll{
+        font-size: 14px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="toplogo"><img src="img/logo.png" alt=""></div>
+        <div class="login">
+            <div class="deng"><img src="img/zhuce-title.png" alt=""></div>
+            <div class="delete"></div>
+            <form class="login_content">
+                <dl>
+                    <dt>用户名</dt>
+                    <dd><input type="text" class="input" placeholder="请输入您的手机号"></dd>
+                </dl>
+                <dl>
+                    <dt>设置密码</dt>
+                    <dd><input type="text" class="input"></dd>
+                </dl>
+                <dl>
+                    <dt>验证码</dt>
+                    <dd>
+                        <input type="text" class="input">
+                        <div class="yan"><img src="img/yanzheng.png" alt=""></div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>地址</dt>
+                    <dd><input name="" id="sel1"  type="text"  class="input" readonly="readonly"></dd>
+                </dl>
+                <dl>
+                    <dt>推荐人编号</dt>
+                    <dd><input type="text" class="input" placeholder="推荐人自动获取"></dd>
+                </dl>
+                <div class="btn_group" >
+                    <a class="btn" style="margin-left: .6rem;"><img src="img/zhuce-btn.png" alt=""></a>
+                    <input type="submit" class="deng_sub">
+                </div>
+                <a class="forget">注册成功后自动登录</a>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script>
+    $(function(){
+        init_city_select($("#sel1"));
+    });
+</script>
+</html>

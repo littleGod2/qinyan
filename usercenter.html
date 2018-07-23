@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script src="js/index.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="layer/layer.js"></script>
+</head>
+<style>
+    .connc{
+        background: url("img/yuanbg.png") no-repeat;
+        background-size: 100% 100%;
+        min-height: 2.3rem;
+        width:2.8rem;
+        margin: .5rem auto 0 auto;
+        position: relative;
+        padding-right:.04rem;
+        padding-bottom: .15rem;
+    }
+    .trade_title img{
+        width:40%;
+    }
+    .baoshi{
+        width:.6rem;
+        height:.19rem;
+        background: #d85c49;
+        border-radius: 50px;
+        font-size: .12rem;
+        padding-top:0rem;
+        color: #fff;
+    }
+    .baoshi img{
+        width:.15rem;
+        vertical-align: middle;
+        margin:.03rem .02rem .06rem .04rem;
+    }
+    .chong_btn{
+        width:.55rem;
+        margin-left:.1rem;
+        margin-top:.03rem;
+    }
+    .chong_btn img{
+        border-radius: 50px;
+    }
+    .chong{
+        display: flex;
+        justify-content: flex-end;
+        padding-right:.06rem;
+        align-items: center;
+        width:67%;
+    }
+
+    /*新增样式*/
+    .myteam{
+        padding: .1rem;
+    }
+    .team_url{
+        border: 2px solid #cd4223;
+        padding: .04rem;
+        color: #666;
+        word-wrap: break-word;
+        border-radius: 4px;
+    }
+    .fuzhi{
+        width: 1.1rem;
+        text-align: center;
+        height: .27rem;
+        line-height: .27rem;
+        background: #cd4223;
+        margin: .07rem auto;
+        color: #fff;
+        border-radius: 4px;
+    }
+    .team_code{
+        width: 1.1rem;
+        margin: 0 auto;
+    }
+    table tr{
+        background: #edc866;
+    }
+    table,table tr th, table tr td { border:1px solid #ad7433;padding:.03rem 0}
+    table { text-align: center; border-collapse: collapse;
+        width: 100%;}
+    .row_l{
+        width:.6rem;
+    }
+    .tixian,.tihuo{
+        padding:.1rem;
+    }
+    .showti{
+        display: none;
+    }
+    .active{
+        display: block!important;
+    }
+    .input{
+        height:.2rem;
+    }
+    .yan {
+        width: .5rem;
+        position: absolute;
+        top: .045rem;
+        right: -.1rem;
+        height: .2rem;
+    }
+    .change_int input{
+        width: 1.6rem;
+        display: block;
+        height: .18rem;
+        border-radius: 4px;
+        margin: .15rem auto;
+        border: 1px solid #ccc;
+        padding-left: .1rem;
+    }
+    .yin{
+        display: inline-block;
+        width: .8rem;
+    }
+    @font-face {
+        font-family: 'iconfont';  /* project id 499083 */
+        src: url('//at.alicdn.com/t/font_499083_3vqyy239ieyx2yb9.eot');
+        src: url('//at.alicdn.com/t/font_499083_3vqyy239ieyx2yb9.eot?#iefix') format('embedded-opentype'),
+        url('//at.alicdn.com/t/font_499083_3vqyy239ieyx2yb9.woff') format('woff'),
+        url('//at.alicdn.com/t/font_499083_3vqyy239ieyx2yb9.ttf') format('truetype'),
+        url('//at.alicdn.com/t/font_499083_3vqyy239ieyx2yb9.svg#iconfont') format('svg');
+    }
+    .icon-font{
+        font-family: iconfont;
+        font-size: .14rem;
+    }
+</style>
+<body>
+<div class="container_index">
+    <div class="top">
+        <div class="index_top">
+            <div class="top_logo">
+                <img src="img/logo.png" alt="" class="lo_1">
+                <img src="img/log.png" alt="" class="lo_2">
+                <img src="img/log2.png" alt="" class="lo_2">
+                <img src="img/log3.png" alt="" class="lo_2">
+                <img src="img/log4.png" alt="" class="lo_2">
+            </div>
+        </div>
+        <ul class="top_menu">
+            <li><a style="width: .38rem;"><img src="img/index_1.png" alt=""></a></li>
+            <li><a style="width: .35rem;"><img src="img/index_2.png" alt=""></a></li>
+            <li><a><img src="img/index_3.png" alt=""></a></li>
+            <li><a style="width: .47rem;"><img src="img/index_4.png" alt=""></a></li>
+            <li><a><img src="img/in‌dex_5.png" alt=""></a></li>
+        </ul>
+        <div class="chong">
+            <div class="baoshi"><img src="img/bao.png" alt="">3810</div>
+            <div class="chong_btn"><img src="img/chong.png" alt=""></div>
+        </div>
+    </div>
+    <div class="connc">
+        <div class="trade_title"><img src="img/user_center.png" alt=""></div>
+        <div class="delete"><img src="img/goback.png" alt=""></div>
+        <div class="my">
+            <div>
+                <p class="my_title">我的资产</p>
+                <p class="my_money">￥80000</p>
+            </div>
+            <div>
+                <p class="my_title">我的收益</p>
+                <p class="my_money">￥80000</p>
+            </div>
+            <div>
+                <p class="my_title">剩余金额</p>
+                <p class="my_money">￥80000</p>
+            </div>
+        </div>
+        <ul class="type">
+            <li class="active"><a data-id="userinfo">个人资料</a></li>
+            <li><a data-id="myteam">我的团队</a></li>
+            <li><a data-id="tixian">提现信息</a></li>
+            <li><a data-id="tihuo">提货信息</a></li>
+        </ul>
+        <div id="userinfo" class="showti active">
+            <div class="u_cont" style="padding-bottom: .1rem;">
+                <div class="rows">
+                    <div class="row_l">姓名：</div>
+                    <div class="row_m">刘晓梅</div>
+                    <div class="row_r"><img src="img/xiu.png" alt="" class="xiu_btn"></div>
+                </div>
+                <div class="rows">
+                    <div class="row_l">提现账号：</div>
+                    <div class="row_m">62478848888</div>
+                    <div class="row_r"><img src="img/xiu.png" alt="" class="xiu_btn"></div>
+                </div>
+                <div class="rows">
+                    <div class="row_l">提现银行：</div>
+                    <div class="row_m"><span class="yin">中国银行</span><span class="icon-font">&#xe604;</span></div>
+                    <div class="row_r"></div>
+                    <ul class="check_ul">
+                        <li>中国银行</li>
+                        <li>建设银行</li>
+                    </ul>
+                </div>
+                <div class="rows">
+                    <div class="row_l">提现开户行：</div>
+                    <div class="row_m"><span class="yin">双楠支行</span><span class="icon-font">&#xe604;</span></div>
+                    <div class="row_r"></div>
+                    <ul class="check_ul">
+                        <li>双楠支行</li>
+                        <li>净居寺支行</li>
+                    </ul>
+                </div>
+                <div class="rows">
+                    <div class="row_l">提货地址：</div>
+                    <div class="row_m">四川省成都市xxxxxx xxxxxxxxxxxxxxxx</div>
+                    <div class="row_r"><img src="img/xiu.png" alt="" class="xiu_btn"></div>
+                </div>
+            </div>
+            <div class="u_cont" style="padding-bottom: .1rem;margin-top: .07rem;">
+                <div class="rows">
+                    <div class="row_l">手机号</div>
+                    <div class="row_m"><input type="text" class="input"></div>
+                </div>
+                <div class="rows">
+                    <div class="row_l">验证码</div>
+                    <div class="row_m">
+                        <input type="text" class="input">
+                        <div class="yan" style="width: .4rem;"><img src="img/fdx-btn.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="row_l">旧密码</div>
+                    <div class="row_m"><input type="text" class="input"></div>
+                </div>
+                <div class="rows">
+                    <div class="row_l">新密码</div>
+                    <div class="row_m"><input type="text" class="input"></div>
+                </div>
+                <div class="rows" style="width: .7rem;margin-left: auto;margin-right: auto;"><img src="img/zhao_btn.png" alt=""></div>
+            </div>
+        </div>
+        <div id="myteam" class="showti">
+            <div class="u_cont">
+                <div class="myteam">
+                    <div class="team_url">http://qyzyck.51kydm.com/user/personal.php</div>
+                    <div class="fuzhi">复制我的推荐码</div>
+                    <div class="team_code"><img src="img/wecode.gif" alt=""></div>
+                    <table class="table1">
+                        <tr>
+                            <th>用户名</th>
+                            <th>注册日期</th>
+                            <th>持有套餐</th>
+                        </tr>
+                        <tr>
+                            <td>铁器种植套餐</td>
+                            <td>2018-04-02</td>
+                            <td>2份</td>
+                        </tr>
+                        <tr>
+                            <td>铁器种植套餐</td>
+                            <td>2018-04-02</td>
+                            <td>2份</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="tixian" class="showti">
+            <div class="u_cont">
+                <div class="tixian">
+                    <div class="rows">
+                        <div class="row_l">提现金额</div>
+                        <div class="row_m" style="width: 1.7rem;"><input type="text" class="input" style="width: .8rem;height: .2rem;"> 可提现：100</div>
+                    </div>
+                    <div class="rows">
+                        <div class="row_l">收款机构：</div>
+                        <div class="row_m">62478848888</div>
+                    </div>
+                    <div class="rows">
+                        <div class="row_l">收款账号：</div>
+                        <div class="row_m">62478848888</div>
+                        <div class="row_r"><img src="img/xiu.png" alt="" class="xiu_btn"></div>
+                    </div>
+                    <div class="rows">
+                        <div class="row_l">手续费：</div>
+                        <div class="row_m">12</div>
+                    </div>
+                    <div class="rows" style="width: .7rem;margin-left: auto;margin-right: auto;"><img src="img/zhao_btn.png" alt=""></div>
+                    <table class="table2" style="margin-top: .1rem;">
+                        <tr>
+                            <th>提现日期</th>
+                            <th>金额</th>
+                            <th>余额</th>
+                            <th>状态</th>
+                        </tr>
+                        <tr>
+                            <td>铁器种植套餐</td>
+                            <td>2018-04-02</td>
+                            <td>1</td>
+                            <td>持有</td>
+                        </tr>
+                        <tr>
+                            <td>铁器种植套餐</td>
+                            <td>2018-04-02</td>
+                            <td>1</td>
+                            <td>持有</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="tihuo" class="showti">
+            <div class="u_cont">
+                <div class="tihuo" style="display: block">
+                    <div class="rows">
+                        <div class="row_l">提货斤数</div>
+                        <div class="row_m" style="width: 1.7rem;"><input type="text" class="input" style="width: .8rem;height: .2rem;"> 可提货：100</div>
+                    </div>
+                    <div class="rows">
+                        <div class="row_l">姓名：</div>
+                        <div class="row_m">62478848888</div>
+                    </div>
+                    <div class="rows">
+                        <div class="row_l">收货地址：</div>
+                        <div class="row_m">62478848888</div>
+                        <div class="row_r"><img src="img/xiu.png" alt="" class="xiu_btn"></div>
+                    </div>
+                    <div class="rows">
+                        <div class="row_l">手续费：</div>
+                        <div class="row_m">12</div>
+                    </div>
+                    <div class="rows" style="width: .7rem;margin-left: auto;margin-right: auto;"><img src="img/zhao_btn.png" alt=""></div>
+                    <table class="table2" style="margin-top: .1rem;">
+                        <tr>
+                            <th>提货日期</th>
+                            <th>金数</th>
+                            <th>快递单号</th>
+                        </tr>
+                        <tr>
+                            <td>铁器种植套餐</td>
+                            <td>2018-04-02</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>铁器种植套餐</td>
+                            <td>2018-04-02</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    $(".type li").click(function(){
+        $(".type li").removeClass('active');
+        $(this).addClass('active')
+    })
+
+    $(".table1 tr:odd").css('background','#fdffb3')
+    $(".table2 tr:odd").css('background','#fdffb3')
+
+    $('.xiu_btn').click(function () {
+        if($('.xiu_btn').index($(this))==0){
+            layer.open({
+                type: 1,
+                title:'修改姓名',
+                area: ['2.2rem', '1rem'], //宽高
+                content: '<div class="change_int"><input type="text" placeholder="请输入修改姓名"></div>'
+            });
+        }else if($('.xiu_btn').index($(this))==1){
+            layer.open({
+                type: 1,
+                title:'修改提现账号',
+                area: ['2.2rem', '1rem'], //宽高
+                content: '<div class="change_int"><input type="text" placeholder="请输入修改提现账号"></div>'
+            });
+        }else if($('.xiu_btn').index($(this))==2){
+            layer.open({
+                type: 1,
+                title:'修改提货地址',
+                area: ['2.2rem', '1rem'], //宽高
+                content: '<div class="change_int"><input type="text" placeholder="请输入修改提货地址"></div>'
+            });
+        }else if($('.xiu_btn').index($(this))==3){
+            layer.open({
+                type: 1,
+                title:'修改收款账号',
+                area: ['2.2rem', '1rem'], //宽高
+                content: '<div class="change_int"><input type="text" placeholder="请输入修改收款账号"></div>'
+            });
+        }else if($('.xiu_btn').index($(this))==4){
+            layer.open({
+                type: 1,
+                title:'修改收货地址',
+                area: ['2.2rem', '1rem'], //宽高
+                content: '<div class="change_int"><input type="text" placeholder="请输入修改收货地址"></div>'
+            });
+        }
+    })
+
+    $(".icon-font").parent().click(function () {
+        $(this).parent().find('.check_ul').show();
+    })
+    $('.check_ul li').click(function () {
+        $(this).parent().parent().find('.yin').text($(this).text());
+        $(this).parent().hide();
+
+    })
+
+    $(".type li a").click(function(){
+        $(".showti").removeClass('active');
+        var id = $(this).attr('data-id');
+        $("#"+id).addClass('active')
+    })
+</script>
+</html>

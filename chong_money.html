@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <title>充值中心</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script src="js/index.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+</head>
+<style>
+    .connc{
+        background: url("img/yuanbg.png") no-repeat;
+        background-size: 100% 100%;
+        min-height: 2.1rem;
+        width:2.8rem;
+        margin: .5rem auto 0 auto;
+        position: relative;
+        padding-right:.04rem;
+    }
+    .trade_title img{
+        width:40%;
+    }
+    .baoshi{
+        width:.6rem;
+        height:.19rem;
+        background: #d85c49;
+        border-radius: 50px;
+        font-size: .12rem;
+        padding-top:0rem;
+        color: #fff;
+    }
+    .baoshi img{
+        width:.15rem;
+        vertical-align: middle;
+        margin:.03rem .02rem .06rem .04rem;
+    }
+    .chong_btn{
+        width:.55rem;
+        margin-left:.1rem;
+        margin-top:.03rem;
+    }
+    .chong_btn img{
+        border-radius: 50px;
+    }
+    .chong{
+        display: flex;
+        justify-content: flex-end;
+        padding-right:.06rem;
+        align-items: center;
+        width:67%;
+    }
+    .chong_e input{
+        background: #d85c49;
+        border-radius: 50px;
+        padding:.05rem 0 .03rem .1rem;
+        border:none;
+        width:78%;
+        margin:.2rem 9% .08rem 9%;
+        font-size:.12rem;
+        color: #fff;
+    }
+    .chong_type{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:.05rem .5rem;
+    }
+    .chong_type>div{
+        width:.7rem;
+    }
+    .chongmoney_btn{
+        width:.65rem;
+        margin:0 auto;
+    }
+    .chong_type div.active img{
+        border: 1px solid #d85c49;
+    }
+</style>
+<body>
+<div class="container_index">
+    <div class="top">
+        <div class="index_top">
+            <div class="top_logo">
+                <img src="img/logo.png" alt="" class="lo_1">
+                <img src="img/log.png" alt="" class="lo_2">
+                <img src="img/log2.png" alt="" class="lo_2">
+                <img src="img/log3.png" alt="" class="lo_2">
+                <img src="img/log4.png" alt="" class="lo_2">
+            </div>
+        </div>
+        <ul class="top_menu">
+            <li><a style="width: .38rem;"><img src="img/index_1.png" alt=""></a></li>
+            <li><a style="width: .35rem;"><img src="img/index_2.png" alt=""></a></li>
+            <li><a><img src="img/index_3.png" alt=""></a></li>
+            <li><a style="width: .47rem;"><img src="img/index_4.png" alt=""></a></li>
+            <li><a><img src="img/in‌dex_5.png" alt=""></a></li>
+        </ul>
+        <div class="chong">
+            <div class="baoshi"><img src="img/bao.png" alt="">3810</div>
+            <div class="chong_btn"><img src="img/chong.png" alt=""></div>
+        </div>
+    </div>
+    <div class="connc">
+        <div class="trade_title"><img src="img/chong_money.png" alt=""></div>
+        <div class="delete"><img src="img/goback.png" alt=""></div>
+        <div class="u_cont" style="padding-bottom: .1rem;margin-top: .15rem;">
+            <div class="chong_e"><input type="number" placeholder="请输入您要充值的金额"></div>
+            <div class="chong_type">
+                <div class="zhi active"><img src="img/zhi.png" alt=""></div>
+                <div class="wechat"><img src="img/wechat.png" alt=""></div>
+            </div>
+            <div class="chongmoney_btn"><img src="img/chongmoney_btn.png" alt=""></div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    $(".type li").click(function(){
+        $(".type li").removeClass('active');
+        $(this).addClass('active')
+    })
+
+    $(".chong_type div").click(function () {
+        $(".chong_type div").removeClass('active');
+        $(this).addClass('active')
+    })
+
+    $(".type li").click(function(){
+        $(".type li").removeClass('active');
+        $(this).addClass('active')
+    })
+
+    $(".chong_type div").click(function () {
+        $(".chong_type div").removeClass('active');
+        $(this).addClass('active')
+    })
+
+    function xuan(types)
+    {
+        $("#types").val(types);
+        if(types == 0){
+            $(".wechat").removeClass('active')
+            $(".zhi").addClass('active')
+        }else if(types == 0){
+            $(".zhi").removeClass('active')
+            $(".wechat").addClass('active')
+        }
+    }
+
+    $(".chongzhi")click(function(){
+
+
+
+    })
+
+</script>
+</html>

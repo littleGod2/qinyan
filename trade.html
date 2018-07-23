@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <title>交易专区</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script src="js/index.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="layer/layer.js"></script>
+</head>
+<style>
+    .connc{
+        background: url("img/yuanbg.png") no-repeat;
+        background-size: 100% 100%;
+        min-height: 2.3rem;
+        width:2.8rem;
+        margin: .5rem auto 0 auto;
+        position: relative;
+        padding-right:.04rem;
+        padding-bottom: .15rem;
+    }
+    .trade_title img{
+        width:40%;
+    }
+
+    .time{
+        display: flex;
+        justify-content: space-between;
+        padding:.1rem;
+        align-items: center;
+    }
+    .time .fa{
+        font-size:.12rem;
+    }
+    .showchart{
+        background: #fdffb6;
+        margin:.1rem 0 0 0;
+        border-radius: 10px;
+        padding: 0 .01rem;
+    }
+    #myChart{
+        width: 100%!important;
+        margin:0;
+    }
+    .choicetime{
+        margin-top: .1rem;
+        background: #7b521e;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+    .choicetime li{
+        color: #fff;
+        text-align: center;
+        width:16.6%;
+        font-size: .13rem;
+        height:.22rem;
+        line-height:.22rem;
+    }
+    .choicetime li.active{
+        color: #fff;
+        background: #a7bf54;
+    }
+    .maimai{
+        width: 1.5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: .1rem auto 0 auto;
+    }
+    .maimai li{
+        width: 33%;
+        text-align: center;
+        height: .33rem;
+        line-height: .33rem;
+        color: #fff;
+        font-size: .18rem;
+        font-weight: 600;
+    }
+    .data_info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /*新增样式*/
+    .tao_num{
+        margin-left: .3rem;
+    }
+    .mairu{
+        background: #f2303b;
+        width: .5rem;
+        height: .25rem;
+        line-height: .25rem;
+        text-align: center;
+        color: #fff;
+        margin: .1rem auto;
+        border-radius: 4px;
+    }
+</style>
+<body>
+<div class="container_index">
+    <div class="top">
+        <div class="index_top">
+            <div class="top_logo"><img src="img/logo.png" alt=""></div>
+        </div>
+        <ul class="top_menu">
+            <li><a style="width: .38rem;"><img src="img/index_1.png" alt=""></a></li>
+            <li><a style="width: .35rem;"><img src="img/index_2.png" alt=""></a></li>
+            <li><a><img src="img/index_3.png" alt=""></a></li>
+            <li><a style="width: .47rem;"><img src="img/index_4.png" alt=""></a></li>
+            <li class="logout"><a><img src="img/in‌dex_5.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="connc">
+        <div class="trade_title"><img src="img/user_center.png" alt=""></div>
+        <div class="delete"><img src="img/goback.png" alt=""></div>
+        <div class="u_cont">
+            <div class="showchart">
+                <div class="time">
+                    <p>2017.11.30</p>
+                    <p><i class="fa fa-refresh" aria-hidden="true"></i></p>
+                </div>
+                <canvas id="myChart" height="120"></canvas>
+                <ul class="choicetime">
+                    <li>分钟</li>
+                    <li>小时</li>
+                    <li>日</li>
+                    <li>周</li>
+                    <li>月</li>
+                    <li class="active" style="border-bottom-right-radius: 4px;">今日</li>
+                </ul>
+            </div>
+            <div class="data_info">
+                <ul class="data_li">
+                    <li>
+                        <div class="data_name">卖1</div>
+                        <div class="data_num">63.92</div>
+                        <div class="data_line"><span></span></div>
+                        <div class="data_money">2</div>
+                    </li>
+                    <li>
+                        <div class="data_name">卖1</div>
+                        <div class="data_num">63.92</div>
+                        <div class="data_line"><span style="width: 20%;"></span></div>
+                        <div class="data_money">2</div>
+                    </li>
+                    <li>
+                        <div class="data_name">卖1</div>
+                        <div class="data_num">63.92</div>
+                        <div class="data_line"></div>
+                        <div class="data_money">2</div>
+                    </li>
+                    <li>
+                        <div class="data_name">卖1</div>
+                        <div class="data_num">63.92</div>
+                        <div class="data_line"></div>
+                        <div class="data_money">2</div>
+                    </li>
+                    <li>
+                        <div class="data_name">卖1</div>
+                        <div class="data_num">63.92</div>
+                        <div class="data_line"></div>
+                        <div class="data_money">2</div>
+                    </li>
+                    <li>
+                        <div class="data_name">卖1</div>
+                        <div class="data_num">63.92</div>
+                        <div class="data_line"></div>
+                        <div class="data_money">2</div>
+                    </li>
+                </ul>
+            </div>
+            <ul class="maimai">
+                <li style="background: #f2303b">买</li>
+                <li style="background: #309ee9">卖</li>
+                <li style="background: #6b89a3">撤</li>
+            </ul>
+        </div>
+    </div>
+    <div id="mairu" style="display: none;">
+        <div class="tao_num" style="margin-top: .05rem;">
+            <div style="margin-right: .03rem;">价格：</div>
+            <div class="cao_num">
+                <div><input type="number" value="0.01" style="width: .4rem;"></div>
+            </div>
+        </div>
+        <div class="tao_num" style="margin-top: .05rem;">
+            <div style="margin-right: .03rem;">数量：</div>
+            <div class="cao_num">
+                <div class="chang_btn minus">-</div>
+                <div><input type="number" value="1" disabled></div>
+                <div class="chang_btn add">+</div>
+                <p style="font-size: .1rem;color: #7b521b;margin-left: .1rem;">可买100斤</p>
+            </div>
+        </div>
+        <div class="mairu">买入</div>
+    </div>
+    <div id="maichu" style="display: none;">
+        <div class="tao_num" style="margin-top: .05rem;">
+            <div style="margin-right: .03rem;">价格：</div>
+            <div class="cao_num">
+                <div><input type="number" value="0.01" style="width: .4rem;"></div>
+            </div>
+        </div>
+        <div class="tao_num" style="margin-top: .05rem;">
+            <div style="margin-right: .03rem;">数量：</div>
+            <div class="cao_num">
+                <div class="chang_btn minus">-</div>
+                <div><input type="number" value="1" disabled></div>
+                <div class="chang_btn add">+</div>
+                <p style="font-size: .1rem;color: #7b521b;margin-left: .1rem;">可买100斤</p>
+            </div>
+        </div>
+        <div class="mairu">卖出</div>
+    </div>
+</div>
+
+</body>
+<script>
+    $(".type li").click(function(){
+        $(".type li").removeClass('active');
+        $(this).addClass('active')
+    })
+    //		图表
+    var data = {
+        labels : ["9am","10am","11am","12am","1pm","2pm","3pm","4pm","5pm","6pm","7pm","8pm","9pm","10pm","11pm"],
+        datasets : [
+            {
+                fillColor : "rgba(66,118,166,0.5)",
+                strokeColor : "rgba(99,159,214,1)",
+                pointColor : "rgba(220,220,220,1)",
+                pointStrokeColor : "#fff",
+                scaleFontSize : 10,
+                pointDotRadius : 1,
+                data : [20,60,120,180,240,100,120,60,120,180,240,200,120,180,40]
+            }
+        ]
+    }
+    var ctx = document.getElementById("myChart").getContext("2d");
+    new Chart(ctx).Line(data);
+
+    $(".choicetime li").click(function(){
+        $(".choicetime li").removeClass('active');
+        $(this).addClass('active');
+    })
+
+    // 点击退出操作
+    $(".logout").click(function () {
+        layer.confirm('确定要退出吗？', {
+            btn: ['确定','取消']
+        }, function(){
+            // 点击确定的操作
+
+        })
+    })
+    var ic,id;
+    $(".maimai li:eq(0)").click(function(){
+        ic = layer.open({
+            type: 1,
+            title:'买入',
+            area: ['2.2rem', '1.3rem'], //宽高
+            content: $('#mairu')
+        });
+    })
+    $(".maimai li:eq(1)").click(function(){
+        id = layer.open({
+            type: 1,
+            title:'卖出',
+            area: ['2.2rem', '1.3rem'], //宽高
+            content: $('#maichu')
+        });
+    })
+
+    $(".mairu").click(function(){
+        layer.close(ic)
+    })
+
+    $(".minus").click(function(){
+        $(this).parent().find('input').val(parseInt($(this).parent().find('input').val())-1)
+    })
+
+    $(".add").click(function(){
+        $(this).parent().find('input').val(parseInt($(this).parent().find('input').val())+1)
+    })
+
+    // 限定数量为1-100
+    $(".chang_btn").click(function(){
+        if(parseInt($(this).parent().find('input').val())<1){
+            $(".minus").css('pointer-events','none')
+        }else{
+            $(".minus").css('pointer-events','all')
+        }
+        if(parseInt($(this).parent().find('input').val())>=100){
+            $(".add").css('pointer-events','none')
+        }else{
+            $(".add").css('pointer-events','all')
+        }
+    })
+
+</script>
+</html>

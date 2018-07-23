@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script src="js/index.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+</head>
+<style>
+    .login{
+        background: url("img/producebg.png") no-repeat;
+        background-size: 100% 100%;
+        height: 2rem;
+        width:2.8rem;
+        margin-top: .5rem;
+    }
+    .deng{
+        width: .5rem;
+        padding-bottom: .04rem;
+    }
+
+</style>
+<body>
+    <div class="container_index">
+        <div class="f_mask">
+            <div class="taocan">
+                <div class="tao_delete"><img src="img/tao_delete.png" alt=""></div>
+                <div class="taocan_title">套餐一</div>
+                <div class="taocan_content">
+                    <div class="tao_bg"><img src="img/tao_bg.png" alt=""></div>
+                    <div class="tao_text">
+                        <div class="tao_price">￥80000</div>
+                        <div class="tao_txt">详情：套餐一套餐一套餐一套餐一套餐一</div>
+                        <div class="tao_num" style="margin-top: .05rem;">
+                            <div style="margin-right: .03rem;">份数：</div>
+                            <div class="cao_num">
+                                <div class="chang_btn minus">-</div>
+                                <div><input type="number" value="1" disabled></div>
+                                <div class="chang_btn add">+</div>
+                            </div>
+                        </div>
+                        <div class="xian">限租200份</div>
+                    </div>
+                </div>
+                <div class="confirm_btn"><img src="img/confirm.png" alt=""></div>
+            </div>
+        </div>
+        <div class="top">
+            <div class="index_top">
+                <div class="top_logo"><img src="img/logo.png" alt=""></div>
+            </div>
+            <ul class="top_menu">
+                <li><a style="width: .38rem;"><img src="img/index_1.png" alt=""></a></li>
+                <li><a style="width: .35rem;"><img src="img/index_2.png" alt=""></a></li>
+                <li><a><img src="img/index_3.png" alt=""></a></li>
+                <li><a style="width: .47rem;"><img src="img/index_4.png" alt=""></a></li>
+                <li><a><img src="img/in‌dex_5.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="login">
+            <div class="deng"><img src="img/producetitle.png" alt=""></div>
+            <div class="delete"></div>
+            <ul class="type">
+                <li class="active"><a>套餐列表</a></li>
+                <li><a>我的套餐</a></li>
+                <li><a>买卖记录</a></li>
+                <li><a>收益记录</a></li>
+            </ul>
+            <div class="produce_content">
+                <dl>
+                    <dt>套餐一</dt>
+                    <dd><img src="img/buy.png" alt=""></dd>
+                </dl>
+                <dl>
+                    <dt>套餐一</dt>
+                    <dd><img src="img/buy.png" alt=""></dd>
+                </dl>
+                <dl>
+                    <dt>套餐一</dt>
+                    <dd><img src="img/buy.png" alt=""></dd>
+                </dl>
+                <dl>
+                    <dt>套餐一</dt>
+                    <dd><img src="img/buy.png" alt=""></dd>
+                </dl>
+                <dl>
+                    <dt>套餐一</dt>
+                    <dd><img src="img/buy.png" alt=""></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    $(".type li").click(function(){
+        $(".type li").removeClass('active');
+        $(this).addClass('active')
+    })
+
+    $(".tao_delete").click(function () {
+        $('.f_mask').hide();
+    })
+
+    $(".produce_content dl dd").click(function () {
+        $('.f_mask').show();
+    })
+
+    $(".minus").click(function(){
+        $(".cao_num input").val(parseInt($(".cao_num input").val())-1)
+    })
+    $(".add").click(function(){
+        $(".cao_num input").val(parseInt($(".cao_num input").val())+1)
+    })
+
+    $(".chang_btn").click(function(){
+        if(parseInt($(".cao_num input").val())<1){
+            $(".minus").css('pointer-events','none')
+        }else{
+            $(".minus").css('pointer-events','all')
+        }
+        if(parseInt($(".cao_num input").val())>=200){
+            $(".add").css('pointer-events','none')
+        }else{
+            $(".add").css('pointer-events','all')
+        }
+    })
+</script>
+</html>

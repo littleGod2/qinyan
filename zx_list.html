@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <title>咨讯列表</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script src="js/index.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+</head>
+<style>
+    .connc{
+        background: url("img/yuanbg.png") no-repeat;
+        background-size: 100% 100%;
+        min-height: 1rem;
+        width:2.8rem;
+        margin: .5rem auto 0 auto;
+        position: relative;
+        padding-right:.04rem;
+        padding-bottom: .15rem;
+    }
+    .trade_title img{
+        width:20%;
+    }
+    .u_cont{
+        background: #fdffb3;
+        width:86%;
+        margin:0 auto;
+        min-height:1rem;
+        max-height: 2rem;
+        border-radius: 10px;
+        box-shadow:inset 0 2px 1px rgba(234,194,85,1);
+        padding: .12rem.1rem;
+        overflow: auto;
+    }
+    .u_cont li{
+        background: #f1a843;
+        border-radius: 8px;
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:.1rem .07rem .1rem .1rem;
+        margin-bottom: .1rem;
+    }
+    .u_img{
+        width:.6rem;
+    }
+    .ut_title{
+        font-size:.12rem;
+        margin-bottom: .05rem;
+    }
+    .u_text{
+        width:1.55rem;
+        font-size: .09rem;
+        color: #fff;
+    }
+    .te_text{
+        word-break:break-all;
+        display:-webkit-box;
+        -webkit-line-clamp:2;
+        -webkit-box-orient:vertical;
+        overflow:hidden;
+    }
+</style>
+<body>
+<div class="container_index">
+    <div class="top">
+        <div class="index_top">
+            <div class="top_logo"><img src="img/logo.png" alt=""></div>
+        </div>
+        <ul class="top_menu">
+            <li><a style="width: .38rem;"><img src="img/index_1.png" alt=""></a></li>
+            <li><a style="width: .35rem;"><img src="img/index_2.png" alt=""></a></li>
+            <li><a><img src="img/index_3.png" alt=""></a></li>
+            <li><a style="width: .47rem;"><img src="img/index_4.png" alt=""></a></li>
+            <li><a><img src="img/in‌dex_5.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="connc">
+        <div class="trade_title"><img src="img/zx.png" alt=""></div>
+        <div class="delete"><img src="img/goback.png" alt=""></div>
+        <ul class="u_cont" style="margin-top: .04rem;">
+            <li>
+                <div class="u_img"><img src="img/timg.png" alt=""></div>
+                <div class="u_text">
+                    <div class="ut_title">沁琰农场</div>
+                    <div class="te_text">农庄以“生态,环保,可持续发展”为经营理念,以绿色、生态、 环保为目标,以资源有效...</div>
+                </div>
+            </li>
+            <li>
+                <div class="u_img"><img src="img/timg.png" alt=""></div>
+                <div class="u_text">
+                    <div class="ut_title">沁琰农场</div>
+                    <div class="te_text">农庄以“生态,环保,可持续发展”为经营理念,以绿色、生态、 环保为目标,以资源有效...</div>
+                </div>
+            </li>
+            <li>
+                <div class="u_img"><img src="img/timg.png" alt=""></div>
+                <div class="u_text">
+                    <div class="ut_title">沁琰农场</div>
+                    <div class="te_text">农庄以“生态,环保,可持续发展”为经营理念,以绿色、生态、 环保为目标,以资源有效...</div>
+                </div>
+            </li>
+            <li>
+                <div class="u_img"><img src="img/timg.png" alt=""></div>
+                <div class="u_text">
+                    <div class="ut_title">沁琰农场</div>
+                    <div class="te_text">农庄以“生态,环保,可持续发展”为经营理念,以绿色、生态、 环保为目标,以资源有效...</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+<script>
+    $(".type li").click(function(){
+        $(".type li").removeClass('active');
+        $(this).addClass('active')
+    })
+
+
+</script>
+</html>

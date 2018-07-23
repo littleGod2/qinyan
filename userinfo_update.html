@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <title>个人资料修改</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script src="js/index.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="layer/layer.js"></script>
+</head>
+<style>
+    @font-face {
+        font-family: 'iconfont';  /* project id 499083 */
+        src: url('//at.alicdn.com/t/font_499083_3vqyy239ieyx2yb9.eot');
+        src: url('//at.alicdn.com/t/font_499083_3vqyy239ieyx2yb9.eot?#iefix') format('embedded-opentype'),
+        url('//at.alicdn.com/t/font_499083_3vqyy239ieyx2yb9.woff') format('woff'),
+        url('//at.alicdn.com/t/font_499083_3vqyy239ieyx2yb9.ttf') format('truetype'),
+        url('//at.alicdn.com/t/font_499083_3vqyy239ieyx2yb9.svg#iconfont') format('svg');
+    }
+    .icon-font{
+        font-family: iconfont;
+        font-size: .14rem;
+    }
+    .connc{
+        background: url("img/yuanbg.png") no-repeat;
+        background-size: 100% 100%;
+        min-height: 2.3rem;
+        width:2.8rem;
+        margin: .5rem auto 0 auto;
+        position: relative;
+        padding-right:.04rem;
+        padding-bottom: .15rem;
+    }
+    .trade_title img{
+        width:40%;
+    }
+    .input{
+        height:.2rem;
+    }
+    .yan {
+        width: .5rem;
+        position: absolute;
+        top: .045rem;
+        right: -.1rem;
+        height: .2rem;
+    }
+    .change_int input{
+        width: 1.6rem;
+        display: block;
+        height: .18rem;
+        border-radius: 4px;
+        margin: .15rem auto;
+        border: 1px solid #ccc;
+        padding-left: .1rem;
+    }
+    .yin{
+        display: inline-block;
+        width: .8rem;
+    }
+</style>
+<body>
+<div class="container_index">
+    <div class="top">
+        <div class="index_top">
+            <div class="top_logo">
+                <img src="img/logo.png" alt="" class="lo_1">
+                <img src="img/log.png" alt="" class="lo_2">
+                <img src="img/log2.png" alt="" class="lo_2">
+                <img src="img/log3.png" alt="" class="lo_2">
+                <img src="img/log4.png" alt="" class="lo_2">
+            </div>
+        </div>
+        <ul class="top_menu">
+            <li><a style="width: .38rem;"><img src="img/index_1.png" alt=""></a></li>
+            <li><a style="width: .35rem;"><img src="img/index_2.png" alt=""></a></li>
+            <li><a><img src="img/index_3.png" alt=""></a></li>
+            <li><a style="width: .47rem;"><img src="img/index_4.png" alt=""></a></li>
+            <li><a><img src="img/in‌dex_5.png" alt=""></a></li>
+        </ul>
+        <div class="chong">
+            <div class="baoshi"><img src="img/bao.png" alt="">3810</div>
+            <div class="chong_btn"><img src="img/chong.png" alt=""></div>
+        </div>
+    </div>
+    <div class="connc">
+        <div class="trade_title"><img src="img/user_center.png" alt=""></div>
+        <div class="delete"><img src="img/goback.png" alt=""></div>
+        <div class="my">
+            <div>
+                <p class="my_title">我的资产</p>
+                <p class="my_money">￥80000</p>
+            </div>
+            <div>
+                <p class="my_title">我的收益</p>
+                <p class="my_money">￥80000</p>
+            </div>
+            <div>
+                <p class="my_title">剩余金额</p>
+                <p class="my_money">￥80000</p>
+            </div>
+        </div>
+        <ul class="type">
+            <li class="active"><a>个人资料</a></li>
+            <li><a>我的团队</a></li>
+            <li><a>提现信息</a></li>
+            <li><a>提货信息</a></li>
+        </ul>
+        <div class="u_cont" style="padding-bottom: .1rem;">
+            <div class="rows">
+                <div class="row_l">姓名：</div>
+                <div class="row_m">刘晓梅</div>
+                <div class="row_r"><img src="img/xiu.png" alt="" class="xiu_btn"></div>
+            </div>
+            <div class="rows">
+                <div class="row_l">提现账号：</div>
+                <div class="row_m">62478848888</div>
+                <div class="row_r"><img src="img/xiu.png" alt="" class="xiu_btn"></div>
+            </div>
+            <div class="rows">
+                <div class="row_l">提现银行：</div>
+                <div class="row_m"><span class="yin">中国银行</span><span class="icon-font">&#xe604;</span></div>
+                <div class="row_r"></div>
+                <ul class="check_ul">
+                    <li>中国银行</li>
+                    <li>建设银行</li>
+                </ul>
+            </div>
+            <div class="rows">
+                <div class="row_l">提现开户行：</div>
+                <div class="row_m"><span class="yin">双楠支行</span><span class="icon-font">&#xe604;</span></div>
+                <div class="row_r"></div>
+                <ul class="check_ul">
+                    <li>双楠支行</li>
+                    <li>净居寺支行</li>
+                </ul>
+            </div>
+            <div class="rows">
+                <div class="row_l">提货地址：</div>
+                <div class="row_m">四川省成都市xxxxxx xxxxxxxxxxxxxxxx</div>
+                <div class="row_r"><img src="img/xiu.png" alt="" class="xiu_btn"></div>
+            </div>
+        </div>
+        <div class="u_cont" style="padding-bottom: .1rem;margin-top: .07rem;">
+            <div class="rows">
+                <div class="row_l">手机号</div>
+                <div class="row_m"><input type="text" class="input"></div>
+            </div>
+            <div class="rows">
+                <div class="row_l">验证码</div>
+                <div class="row_m">
+                    <input type="text" class="input">
+                    <div class="yan" style="width: .4rem;"><img src="img/fdx-btn.png" alt=""></div>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="row_l">旧密码</div>
+                <div class="row_m"><input type="text" class="input"></div>
+            </div>
+            <div class="rows">
+                <div class="row_l">新密码</div>
+                <div class="row_m"><input type="text" class="input"></div>
+            </div>
+            <div class="rows" style="width: .7rem;margin-left: auto;margin-right: auto;"><img src="img/zhao_btn.png" alt=""></div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    $(".type li").click(function(){
+        $(".type li").removeClass('active');
+        $(this).addClass('active')
+    })
+    
+    $('.xiu_btn').click(function () {
+        if($('.xiu_btn').index($(this))==0){
+            layer.open({
+                type: 1,
+                title:'修改姓名',
+                area: ['2.2rem', '1rem'], //宽高
+                content: '<div class="change_int"><input type="text" placeholder="请输入修改姓名"></div>'
+            });
+        }else if($('.xiu_btn').index($(this))==1){
+            layer.open({
+                type: 1,
+                title:'修改提现账号',
+                area: ['2.2rem', '1rem'], //宽高
+                content: '<div class="change_int"><input type="text" placeholder="请输入修改提现账号"></div>'
+            });
+        }else if($('.xiu_btn').index($(this))==2){
+            layer.open({
+                type: 1,
+                title:'修改提货地址',
+                area: ['2.2rem', '1rem'], //宽高
+                content: '<div class="change_int"><input type="text" placeholder="请输入修改提货地址"></div>'
+            });
+        }
+    })
+
+    $(".icon-font").parent().click(function () {
+        $(this).parent().find('.check_ul').show();
+    })
+    $('.check_ul li').click(function () {
+        $(this).parent().parent().find('.yin').text($(this).text());
+        $(this).parent().hide();
+
+    })
+</script>
+</html>
